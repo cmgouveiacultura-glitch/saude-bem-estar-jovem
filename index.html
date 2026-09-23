@@ -74,23 +74,29 @@
     footer{padding:21px 0 28px;color:#728592;text-align:center;font-size:.8rem}
     a:focus-visible{outline:3px solid #f4a24a;outline-offset:4px}
 
-    @media(max-width:820px){.hero-inner{grid-template-columns:1fr;gap:20px;min-height:auto;padding:26px 0 30px}.brands{width:100%;justify-content:flex-start;gap:18px}.brand-divider{height:70px}.municipio-logo{width:190px}.cmj-logo{width:155px}.cards,.info{grid-template-columns:1fr}}
-      .brands{width:100%;flex-direction:row;justify-content:space-between;align-items:center;padding:13px 16px}
-      .brand-divider{width:1px;height:58px}
-      .municipio-logo{width:230px;height:66px}
-      .cmj-logo{width:210px;height:78px}
-      .cards,.info{grid-template-columns:1fr}
+    @media(max-width:820px){
+      .hero-inner{grid-template-columns:1fr;gap:20px;min-height:auto;padding:26px 0 30px}
+      .brands{width:100%;justify-content:flex-start;gap:18px}
+      .brand-divider{height:70px}
+      .municipio-logo{width:190px}
+      .cmj-logo{width:155px}
     }
-    @media(max-width:560px){.shell{width:min(100% - 24px,1120px)}h1{font-size:clamp(2.55rem,13vw,3.7rem)}.lead{font-size:.93rem}.topic{font-size:.7rem}.brands{gap:12px}.municipio-logo{width:53%}.cmj-logo{width:41%}.brand-divider{height:58px}main{padding-top:26px}.card{min-height:300px;padding:20px}}
+
+    @media(max-width:560px){
+      .shell{width:min(100% - 24px,1120px)}
       h1{font-size:clamp(2.55rem,13vw,3.7rem)}
       .lead{font-size:.93rem}
       .topic{font-size:.7rem}
-      .brands{gap:9px}
-      .municipio-logo{width:48%;height:58px}
-      .cmj-logo{width:45%;height:62px}
-      .brand-divider{height:48px}
+      .brands{gap:12px}
+      .municipio-logo{width:53%}
+      .cmj-logo{width:41%}
+      .brand-divider{height:58px}
       main{padding-top:26px}
       .card{min-height:300px;padding:20px}
+    }
+
+    @media(max-width:440px){
+      .cards,.info{grid-template-columns:1fr}
     }
   </style>
 </head>
