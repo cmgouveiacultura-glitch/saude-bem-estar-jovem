@@ -21,60 +21,23 @@ img{display:block;max-width:100%}
 
 /* hero */
 .hero-banner{
-  position:relative;
-  min-height:620px;
+  width:100%;
   overflow:hidden;
-  background:
-    linear-gradient(rgba(4,57,103,.18),rgba(4,57,103,.06)),
-    url("https://raw.githubusercontent.com/cmgouveiacultura-glitch/formularios-associativismo/main/assets/gouveia.jpg") center 46%/cover no-repeat;
+  background:#0b3f69;
 }
-.hero-overlay{
-  width:min(1180px,calc(100% - 32px));
-  min-height:620px;
-  margin:0 auto;
-  padding:34px 0 42px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
-  text-align:center;
-}
-.hero-logos{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:28px;
-  margin-bottom:22px;
-}
-.hero-logo-mun{width:260px;height:118px;object-fit:contain}
-.hero-logo-cmj{width:300px;height:118px;object-fit:contain}
-.hero-sep{width:2px;height:94px;background:rgba(255,255,255,.78)}
-.hero-title{
-  margin:0;
-  font-size:clamp(3rem,6.1vw,5.8rem);
-  line-height:.95;
-  letter-spacing:-.055em;
-  font-weight:900;
-  color:#fff;
-  text-shadow:0 5px 18px rgba(0,0,0,.38);
-}
-.hero-title .blue{color:#22b8ef}
-.hero-sub{
-  margin:22px 0 0;
-  font-size:clamp(1.15rem,2vw,1.8rem);
-  letter-spacing:.12em;
-  color:#fff;
-  text-shadow:0 3px 10px rgba(0,0,0,.35);
+.hero-banner img{
+  display:block;
+  width:100%;
+  height:clamp(420px,47vw,620px);
+  object-fit:cover;
+  object-position:center top;
 }
 @media(max-width:700px){
-  .hero-banner,.hero-overlay{min-height:500px}
-  .hero-overlay{padding:24px 0 30px}
-  .hero-logos{gap:14px}
-  .hero-logo-mun{width:42vw;height:auto;max-height:84px}
-  .hero-logo-cmj{width:45vw;height:auto;max-height:84px}
-  .hero-sep{height:66px}
-  .hero-title{font-size:clamp(2.3rem,11vw,4rem)}
-  .hero-sub{font-size:.95rem;letter-spacing:.08em}
+  .hero-banner img{
+    height:auto;
+    max-height:none;
+    object-fit:contain;
+  }
 }
 
 /* sections */
@@ -204,15 +167,7 @@ a:focus-visible{outline:3px solid #f3a24d;outline-offset:4px}
 <body>
 
 <header class="hero-banner">
-  <div class="hero-overlay">
-    <div class="hero-logos" aria-label="Município de Gouveia e Conselho Municipal da Juventude de Gouveia">
-      <img class="hero-logo-mun" src="assets/logo-gouveia.png" alt="Município de Gouveia">
-      <span class="hero-sep" aria-hidden="true"></span>
-      <img class="hero-logo-cmj" src="assets/logo-cmj.png" alt="Conselho Municipal da Juventude de Gouveia">
-    </div>
-    <h1 class="hero-title">Saúde e <span class="blue">Bem-Estar</span> Jovem</h1>
-    <p class="hero-sub">Diagnóstico Jovem · Concelho de Gouveia</p>
-  </div>
+  <img src="assets/banner-header.jpg" alt="Saúde e Bem-Estar Jovem — Diagnóstico Jovem · Concelho de Gouveia">
 </header>
 
 <main>
