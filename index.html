@@ -1,300 +1,283 @@
 <!doctype html>
 <html lang="pt-PT">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Saúde e Bem-Estar Jovem — diagnóstico promovido pelo Município de Gouveia e pelo Conselho Municipal da Juventude de Gouveia.">
-  <meta name="theme-color" content="#0b4c7a">
-  <title>Saúde e Bem-Estar Jovem | Concelho de Gouveia</title>
-  <style>
-    :root{
-      --navy:#0b3f69;--navy2:#062d4c;--blue:#168fc9;--sky:#74cbed;
-      --orange:#e97924;--orange2:#c95c12;--ink:#15364c;--muted:#607787;
-      --line:#d9e8f0;--bg:#f6fafc;--white:#fff;--shadow:0 16px 42px rgba(11,63,105,.10);
-      --radius:24px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.52}
-    a{color:inherit}
-    img{display:block;max-width:100%}
-    .shell{width:min(1160px,calc(100% - 40px));margin-inline:auto}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Saúde e Bem-Estar Jovem — diagnóstico promovido pelo Município de Gouveia e pelo Conselho Municipal da Juventude de Gouveia.">
+<meta name="theme-color" content="#0b4f7d">
+<title>Saúde e Bem-Estar Jovem | Concelho de Gouveia</title>
+<style>
+:root{
+  --navy:#0b3f69;--navy2:#062d4c;--blue:#1593ce;--sky:#8ed8f3;
+  --orange:#e97a24;--ink:#17394f;--muted:#657c8b;--line:#dce9f0;
+  --bg:#f7fbfd;--white:#fff;--soft:#eef7fb;--shadow:0 14px 38px rgba(8,50,82,.09)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+a{color:inherit}
+img{display:block;max-width:100%}
+.shell{width:min(1160px,calc(100% - 40px));margin-inline:auto}
 
-    .hero{
-      position:relative;overflow:hidden;color:#fff;
-      background:
-        radial-gradient(circle at 86% 12%,rgba(116,203,237,.22),transparent 28%),
-        linear-gradient(135deg,#082e4f 0%,#0b5f91 55%,#158fc7 100%);
-      border-bottom:1px solid rgba(255,255,255,.12);
-    }
-    .hero:before{
-      content:"";position:absolute;left:-120px;bottom:-160px;width:520px;height:230px;
-      border-radius:50%;background:rgba(255,255,255,.07);transform:rotate(-10deg)
-    }
-    .hero-inner{
-      position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) auto;
-      gap:46px;align-items:center;min-height:330px;padding:34px 0 36px;
-    }
-    .eyebrow{margin:0 0 8px;color:#d7f2ff;font-weight:850;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
-    h1{margin:0;font-size:clamp(2.85rem,5vw,4.8rem);line-height:.93;letter-spacing:-.055em}
-    h1 span{color:#a8e6ff}
-    .lead{margin:16px 0 0;max-width:720px;color:#e7f5fb;font-size:1.02rem}
-    .hero-note{margin:12px 0 0;color:#cdebf8;font-size:.92rem;font-weight:650}
-    .topic-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-    .topic{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(255,255,255,.1);font-size:.78rem;font-weight:750}
+/* institucional */
+.institutional{background:#fff;border-bottom:1px solid #e5eef3}
+.institutional-inner{min-height:112px;display:flex;align-items:center;justify-content:flex-end;gap:26px}
+.municipio-logo{width:245px;height:82px;object-fit:contain}
+.brand-divider{width:1px;height:70px;background:#d8e5ec}
+.cmj-logo{width:205px;height:84px;object-fit:contain}
 
-    .brands{width:430px;display:flex;align-items:center;justify-content:flex-end;gap:22px}
-    .municipio-logo{width:220px;height:auto;object-fit:contain}
-    .brand-divider{width:1px;height:88px;background:rgba(255,255,255,.28)}
-    .cmj-logo{width:180px;height:auto;object-fit:contain}
+/* hero */
+.hero{
+  position:relative;overflow:hidden;color:#fff;
+  background:
+    radial-gradient(circle at 87% 18%,rgba(142,216,243,.22),transparent 28%),
+    linear-gradient(135deg,#082f50 0%,#0c6093 58%,#1495cf 100%)
+}
+.hero:after{
+  content:"";position:absolute;left:-90px;bottom:-155px;width:520px;height:230px;
+  border-radius:50%;background:rgba(255,255,255,.065);transform:rotate(-8deg)
+}
+.hero-inner{position:relative;z-index:1;max-width:900px;padding:48px 0 52px}
+.eyebrow{margin:0 0 9px;color:#cdefff;font-size:.77rem;font-weight:850;letter-spacing:.13em;text-transform:uppercase}
+h1{margin:0;font-size:clamp(3rem,6vw,5.25rem);line-height:.91;letter-spacing:-.06em}
+h1 span{color:#a9e7ff}
+.hero-copy{margin:20px 0 0;max-width:790px;color:#e9f6fb;font-size:1.04rem}
+.hero-copy strong{color:#fff}
+.topics{display:flex;flex-wrap:wrap;gap:8px;margin-top:21px}
+.topic{padding:7px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(255,255,255,.09);font-size:.77rem;font-weight:760}
 
-    main{padding:34px 0 54px}
-    .intro-block{
-      display:grid;grid-template-columns:1.05fr .95fr;gap:18px;
-      margin-bottom:28px;
-    }
-    .intro-card,.purpose-card{
-      padding:24px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 8px 28px rgba(11,63,105,.05)
-    }
-    .section-kicker{margin:0 0 7px;color:#1884bd;font-size:.75rem;font-weight:850;letter-spacing:.11em;text-transform:uppercase}
-    .intro-card h2,.purpose-card h2,.support-head h2{
-      margin:0;color:var(--navy2);font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.06;letter-spacing:-.035em
-    }
-    .intro-card p,.purpose-card p{margin:10px 0 0;color:var(--muted);font-size:.94rem}
-    .purpose-list{display:grid;gap:9px;margin-top:14px}
-    .purpose-item{display:flex;gap:9px;align-items:flex-start;color:#456174;font-size:.9rem}
-    .purpose-item b{color:var(--navy2)}
+/* sections */
+main{padding:46px 0 56px}
+.section{margin-top:44px}
+.section:first-child{margin-top:0}
+.kicker{margin:0 0 7px;color:#167aac;font-size:.74rem;font-weight:850;letter-spacing:.11em;text-transform:uppercase}
+.section-title{margin:0;color:var(--navy2);font-size:clamp(1.75rem,3.2vw,2.45rem);line-height:1.06;letter-spacing:-.04em}
+.section-copy{margin:11px 0 0;max-width:850px;color:var(--muted);font-size:.96rem}
 
-    .survey-section{margin-top:4px}
-    .survey-head{text-align:center;max-width:760px;margin:0 auto 22px}
-    .survey-head h2{margin:0;color:var(--navy2);font-size:clamp(1.8rem,3vw,2.4rem);line-height:1.05;letter-spacing:-.035em}
-    .survey-head p{margin:8px 0 0;color:var(--muted);font-size:.94rem}
-    .survey-emphasis{margin-top:8px;color:#0b5f91;font-weight:780;font-size:.9rem}
+/* intro editorial, not card-heavy */
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+.about-main p{margin:12px 0 0;color:var(--muted)}
+.about-points{display:grid;gap:15px;padding-top:8px}
+.point{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.point-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#e9f6fc;font-size:.95rem}
+.point strong{display:block;color:var(--navy2);font-size:.94rem}
+.point span{display:block;margin-top:2px;color:var(--muted);font-size:.84rem}
 
-    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:stretch}
-    .card{position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:320px;padding:24px;border-radius:var(--radius);background:#fff;box-shadow:var(--shadow)}
-    .school{border:1px solid #cde7f4}.adult{border:1px solid #f0d6c3}
-    .card:after{content:"";position:absolute;width:190px;height:190px;right:-78px;top:-82px;border-radius:50%;opacity:.1}
-    .school:after{background:var(--blue)}.adult:after{background:var(--orange)}
-    .pill{position:relative;z-index:1;align-self:flex-start;padding:6px 10px;border-radius:999px;font-size:.7rem;font-weight:850;letter-spacing:.04em;text-transform:uppercase}
-    .school .pill{color:#0a608f;background:#e8f6fd}.adult .pill{color:#a8450e;background:#fff1e6}
-    .card h3{position:relative;z-index:1;margin:17px 0 8px;color:var(--navy2);font-size:1.8rem;line-height:1.03;letter-spacing:-.035em}
-    .card p{position:relative;z-index:1;margin:0;color:#5a7181;font-size:.93rem}
-    .meta{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}
-    .meta span{padding:6px 8px;border-radius:999px;background:#f4f8fa;color:#587081;font-size:.75rem;font-weight:700}
-    .card .note{margin-top:13px;padding:10px 12px;border-radius:13px;font-size:.82rem}
-    .school .note{background:#f0f9fd;color:#365c71}.adult .note{background:#fff7f0;color:#75513d}
-    .spacer{flex:1}
-    .cta{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:19px;padding:13px 15px;border-radius:14px;color:#fff;font-weight:850;text-decoration:none;transition:.18s ease}
-    .school .cta{background:linear-gradient(135deg,#0e6fa8,#18a4df)}
-    .adult .cta{background:linear-gradient(135deg,#c75613,#ef842e)}
-    .cta:hover{transform:translateY(-2px)}
-    .cta span:last-child{font-size:1.3rem}
+/* questionários */
+.survey-head{text-align:center;max-width:800px;margin:0 auto 22px}
+.survey-head .section-copy{margin-left:auto;margin-right:auto}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{
+  position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:335px;
+  padding:25px;border-radius:22px;background:#fff;box-shadow:var(--shadow)
+}
+.school{border:1px solid #cce6f3}.adult{border:1px solid #f1d6c1}
+.card:after{content:"";position:absolute;right:-75px;top:-86px;width:190px;height:190px;border-radius:50%;opacity:.09}
+.school:after{background:var(--blue)}.adult:after{background:var(--orange)}
+.pill{position:relative;z-index:1;align-self:flex-start;padding:6px 10px;border-radius:999px;font-size:.69rem;font-weight:850;letter-spacing:.04em;text-transform:uppercase}
+.school .pill{background:#e8f6fd;color:#0a618f}.adult .pill{background:#fff1e6;color:#a9470f}
+.card h3{position:relative;z-index:1;margin:18px 0 9px;color:var(--navy2);font-size:1.86rem;letter-spacing:-.04em;line-height:1.02}
+.card p{position:relative;z-index:1;margin:0;color:#5c7281;font-size:.92rem}
+.meta{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.meta span{padding:5px 8px;border-radius:999px;background:#f4f8fa;color:#59707f;font-size:.73rem;font-weight:720}
+.note{margin-top:13px!important;padding:10px 12px;border-radius:12px;font-size:.8rem!important}
+.school .note{background:#f0f9fd;color:#365c71}.adult .note{background:#fff7f0;color:#75513d}
+.spacer{flex:1}
+.cta{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;margin-top:20px;padding:13px 15px;border-radius:13px;color:#fff;text-decoration:none;font-weight:850;transition:.18s ease}
+.school .cta{background:linear-gradient(135deg,#0e6fa8,#18a4df)}
+.adult .cta{background:linear-gradient(135deg,#c75a16,#ef842e)}
+.cta:hover{transform:translateY(-2px)}
 
-    .support{margin-top:34px;padding-top:4px}
-    .support-head{text-align:center;max-width:780px;margin:0 auto 20px}
-    .support-head p{margin:9px 0 0;color:var(--muted);font-size:.94rem}
-    .support-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-    .support-card{
-      min-height:205px;display:flex;flex-direction:column;padding:18px;border:1px solid var(--line);
-      border-radius:20px;background:#fff;box-shadow:0 8px 24px rgba(11,63,105,.05)
-    }
-    .support-icon{font-size:1.4rem}
-    .support-card h3{margin:12px 0 7px;color:var(--navy2);font-size:1.05rem;line-height:1.15}
-    .support-card p{margin:0;color:var(--muted);font-size:.83rem}
-    .support-card strong{color:#294f67}
-    .support-link{margin-top:auto;padding-top:15px;color:#0b6fa8;font-size:.82rem;font-weight:850;text-decoration:none}
-    .support-link:hover{text-decoration:underline}
+/* apoio */
+.support-band{margin-top:50px;padding:42px 0;background:#edf7fb;border-top:1px solid #dcecf3;border-bottom:1px solid #dcecf3}
+.support-top{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:20px}
+.support-top .section-copy{max-width:700px}
+.emergency-inline{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid #efd8dc;border-radius:999px;background:#fff;color:#8f3341;font-size:.8rem;font-weight:820;white-space:nowrap}
+.emergency-inline i{width:8px;height:8px;border-radius:50%;background:#c73f51}
+.support-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.support-card{display:flex;flex-direction:column;min-height:190px;padding:18px;border:1px solid #d7e8f0;border-radius:17px;background:#fff}
+.support-card .icon{font-size:1.25rem}
+.support-card h3{margin:10px 0 6px;color:var(--navy2);font-size:1rem;line-height:1.15}
+.support-card p{margin:0;color:var(--muted);font-size:.81rem}
+.support-card strong{color:#294e65}
+.support-card a{margin-top:auto;padding-top:14px;color:#0b70aa;font-size:.8rem;font-weight:850;text-decoration:none}
+.support-card a:hover{text-decoration:underline}
 
-    .privacy{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
-    .privacy-card{padding:18px 20px;border:1px solid var(--line);border-radius:18px;background:#fff}
-    .privacy-card h3{margin:0 0 6px;color:var(--navy2);font-size:1rem}
-    .privacy-card p{margin:0;color:var(--muted);font-size:.86rem}
+/* confiança */
+.trust{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:40px}
+.trust-item{padding:18px 0;border-top:2px solid #d9e9f1}
+.trust-item strong{display:block;color:var(--navy2);font-size:.95rem}
+.trust-item span{display:block;margin-top:4px;color:var(--muted);font-size:.83rem}
 
-    .emergency{
-      margin-top:22px;padding:16px 18px;border-radius:18px;color:#fff;
-      background:linear-gradient(135deg,#8f2635,#c94455);text-align:center
-    }
-    .emergency strong{font-size:1rem}
-    .emergency span{display:block;margin-top:3px;font-size:.84rem;color:#fff0f2}
+/* links */
+.links{margin-top:38px;padding-top:25px;border-top:1px solid #dce8ee}
+.links h3{margin:0 0 12px;color:var(--navy2);font-size:1rem}
+.link-row{display:flex;flex-wrap:wrap;gap:9px}
+.link-row a{padding:7px 10px;border-radius:999px;background:#eef5f8;color:#355d73;font-size:.78rem;font-weight:760;text-decoration:none}
+.link-row a:hover{background:#e2eff5}
 
-    .links{
-      margin-top:24px;padding:22px;border:1px solid var(--line);border-radius:20px;background:#fff
-    }
-    .links h3{margin:0 0 11px;color:var(--navy2);font-size:1.05rem}
-    .link-row{display:flex;flex-wrap:wrap;gap:9px}
-    .link-row a{padding:8px 10px;border-radius:999px;background:#f2f7fa;color:#315a72;font-size:.8rem;font-weight:760;text-decoration:none}
-    .link-row a:hover{background:#e7f2f8}
+footer{padding:24px 0 32px;color:#728592;text-align:center;font-size:.78rem}
+a:focus-visible{outline:3px solid #f3a24d;outline-offset:4px}
 
-    footer{padding:22px 0 30px;color:#728592;text-align:center;font-size:.8rem}
-    a:focus-visible{outline:3px solid #f4a24a;outline-offset:4px}
-
-    @media(max-width:920px){
-      .hero-inner{grid-template-columns:1fr;gap:22px;min-height:auto;padding:28px 0 32px}
-      .brands{width:100%;justify-content:flex-start}
-      .intro-block{grid-template-columns:1fr}
-      .support-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-    }
-    @media(max-width:620px){
-      .shell{width:min(100% - 24px,1160px)}
-      h1{font-size:clamp(2.55rem,13vw,3.7rem)}
-      .lead{font-size:.94rem}
-      .topic{font-size:.7rem}
-      .brands{gap:12px}
-      .municipio-logo{width:52%}
-      .cmj-logo{width:42%}
-      .brand-divider{height:58px}
-      .privacy{grid-template-columns:1fr}
-      .support-grid{grid-template-columns:1fr}
-    }
-    @media(max-width:440px){
-      .cards{grid-template-columns:1fr}
-    }
-  </style>
+@media(max-width:920px){
+  .about{grid-template-columns:1fr;gap:24px}
+  .support-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .support-top{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:650px){
+  .shell{width:min(100% - 24px,1160px)}
+  .institutional-inner{min-height:92px;gap:14px;justify-content:center}
+  .municipio-logo{width:52%;height:66px}
+  .cmj-logo{width:40%;height:68px}
+  .brand-divider{height:54px}
+  .hero-inner{padding:38px 0 42px}
+  .support-grid{grid-template-columns:1fr}
+  .trust{grid-template-columns:1fr}
+}
+@media(max-width:440px){
+  .cards{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
-  <header class="hero">
+
+<header>
+  <div class="institutional">
+    <div class="shell institutional-inner" aria-label="Entidades promotoras">
+      <img class="municipio-logo" src="https://raw.githubusercontent.com/cmgouveiacultura-glitch/formularios-associativismo/main/assets/logo-municipio.png" alt="Município de Gouveia">
+      <div class="brand-divider" aria-hidden="true"></div>
+      <img class="cmj-logo" src="data:image/webp;base64,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" alt="Conselho Municipal da Juventude do Município de Gouveia">
+    </div>
+  </div>
+
+  <div class="hero">
     <div class="shell hero-inner">
-      <div>
-        <p class="eyebrow">Diagnóstico Jovem · Concelho de Gouveia</p>
-        <h1>Saúde e Bem-Estar <span>Jovem</span></h1>
-        <p class="lead">O Município de Gouveia, através do Conselho Municipal da Juventude de Gouveia, quer ouvir os jovens do concelho e conhecer melhor a sua realidade.</p>
-        <p class="hero-note">Queremos perceber como te sentes, que dificuldades encontras, que apoios conheces e o que consideras importante melhorar.</p>
-        <div class="topic-row" aria-label="Temas do diagnóstico">
-          <span class="topic">🧠 Saúde mental e bem-estar</span>
-          <span class="topic">❤️ Saúde sexual e reprodutiva</span>
-          <span class="topic">⚠️ Comportamentos aditivos</span>
-          <span class="topic">🤝 Relações saudáveis e violência</span>
-        </div>
-      </div>
-
-      <div class="brands" aria-label="Entidades promotoras">
-        <img class="municipio-logo" src="https://raw.githubusercontent.com/cmgouveiacultura-glitch/formularios-associativismo/main/assets/logo-municipio.png" alt="Município de Gouveia">
-        <div class="brand-divider" aria-hidden="true"></div>
-        <img class="cmj-logo" src="data:image/webp;base64,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" alt="Conselho Municipal da Juventude do Município de Gouveia">
+      <p class="eyebrow">Diagnóstico Jovem · Concelho de Gouveia</p>
+      <h1>Saúde e Bem-Estar <span>Jovem</span></h1>
+      <p class="hero-copy">O <strong>Município de Gouveia</strong>, através do <strong>Conselho Municipal da Juventude de Gouveia</strong>, quer ouvir os jovens e conhecer melhor a sua realidade. Queremos perceber como se sentem, que dificuldades encontram, que apoios conhecem e o que consideram importante melhorar.</p>
+      <div class="topics" aria-label="Temas do diagnóstico">
+        <span class="topic">🧠 Saúde mental e bem-estar</span>
+        <span class="topic">❤️ Saúde sexual e reprodutiva</span>
+        <span class="topic">⚠️ Comportamentos aditivos</span>
+        <span class="topic">🤝 Relações saudáveis e violência</span>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main>
+<main>
+  <div class="shell">
+
+    <section class="section about" aria-labelledby="sobre">
+      <div class="about-main">
+        <p class="kicker">Sobre este diagnóstico</p>
+        <h2 class="section-title" id="sobre">Ouvir para compreender. Compreender para melhorar.</h2>
+        <p>Este diagnóstico pretende conhecer necessidades, dificuldades, aspetos positivos e oportunidades de melhoria nas áreas da saúde e do bem-estar juvenil no concelho de Gouveia.</p>
+        <p>As respostas serão analisadas de forma conjunta e vão ajudar a apoiar o planeamento de futuras ações e respostas dirigidas aos jovens.</p>
+      </div>
+      <div class="about-points">
+        <div class="point"><div class="point-icon">💬</div><div><strong>Queremos ouvir diferentes realidades</strong><span>Não precisas de estar a passar por um problema para participar.</span></div></div>
+        <div class="point"><div class="point-icon">🔒</div><div><strong>Participação anónima</strong><span>Não é pedido nome, email, telefone ou outro elemento de identificação direta.</span></div></div>
+        <div class="point"><div class="point-icon">📊</div><div><strong>Resultados para orientar decisões</strong><span>Os dados serão analisados de forma agregada, procurando perceber prioridades e necessidades.</span></div></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="questionarios">
+      <div class="survey-head">
+        <p class="kicker">Participa</p>
+        <h2 class="section-title" id="questionarios">Escolhe o questionário adequado</h2>
+        <p class="section-copy">Existem duas versões, adaptadas à realidade de cada grupo. Ambas são voluntárias, anónimas e demoram cerca de 6–8 minutos.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card school">
+          <span class="pill">🎓 Contexto escolar</span>
+          <h3>Questionário 14+</h3>
+          <p>Para jovens com <strong>14 ou mais anos que frequentam um estabelecimento de ensino</strong>, incluindo alunos com 18 anos ou mais.</p>
+          <div class="meta"><span>🔒 Anónimo</span><span>⏱️ 6–8 min</span><span>💬 A tua opinião conta</span></div>
+          <p class="note"><strong>Tens 18 anos ou mais e ainda estudas?</strong> Se frequentas um estabelecimento de ensino, responde a esta versão.</p>
+          <div class="spacer"></div>
+          <a class="cta" href="https://docs.google.com/forms/d/1Hlvp6TDhH1MXH_SeUKsv_bv7-NNcRSjzOM2Em3Ux62c/viewform" target="_blank" rel="noopener noreferrer"><span>Responder ao questionário 14+</span><span>→</span></a>
+        </article>
+
+        <article class="card adult">
+          <span class="pill">👥 Jovens adultos</span>
+          <h3>Questionário 18–35</h3>
+          <p>Para jovens com idades compreendidas entre os <strong>18 e os 35 anos</strong>, com perguntas adaptadas à realidade adulta, profissional e académica.</p>
+          <div class="meta"><span>🔒 Anónimo</span><span>⏱️ 6–8 min</span><span>💬 A tua opinião conta</span></div>
+          <p class="note"><strong>Esta é a versão geral.</strong> Se tens 18+ mas estás em contexto escolar, utiliza o questionário 14+.</p>
+          <div class="spacer"></div>
+          <a class="cta" href="https://docs.google.com/forms/d/18HA-TBj0mkaYaFF-Y9zkT-DirxneFkQiq82Xs7GB3as/viewform" target="_blank" rel="noopener noreferrer"><span>Responder ao questionário 18–35</span><span>→</span></a>
+        </article>
+      </div>
+    </section>
+
+  </div>
+
+  <section class="support-band" aria-labelledby="apoio">
     <div class="shell">
-      <section class="intro-block" aria-label="Sobre o diagnóstico">
-        <div class="intro-card">
-          <p class="section-kicker">Porque estamos a fazer este diagnóstico?</p>
-          <h2>Queremos conhecer melhor a realidade dos jovens.</h2>
-          <p>Este diagnóstico pretende identificar necessidades, dificuldades, pontos positivos e oportunidades de melhoria nas áreas da saúde e do bem-estar juvenil no concelho de Gouveia.</p>
-          <p>As respostas serão analisadas de forma conjunta e servirão de base para pensar futuras ações, respostas e formas de apoio mais próximas daquilo que os jovens realmente precisam.</p>
+      <div class="support-top">
+        <div>
+          <p class="kicker">Informação e apoio</p>
+          <h2 class="section-title" id="apoio">Onde podes procurar informação ou ajuda</h2>
+          <p class="section-copy">Selecionámos alguns recursos oficiais relacionados com os temas abordados nos questionários.</p>
         </div>
-        <div class="purpose-card">
-          <p class="section-kicker">A tua participação conta</p>
-          <h2>Não precisas de estar a passar por um problema para participar.</h2>
-          <div class="purpose-list">
-            <div class="purpose-item"><span>✓</span><span><b>Queremos ouvir todos os jovens</b>, com diferentes experiências e realidades.</span></div>
-            <div class="purpose-item"><span>✓</span><span>O questionário é <b>anónimo e voluntário</b>.</span></div>
-            <div class="purpose-item"><span>✓</span><span>Demora cerca de <b>6–8 minutos</b>.</span></div>
-            <div class="purpose-item"><span>✓</span><span>Não existem respostas certas ou erradas — interessa-nos a tua opinião.</span></div>
-          </div>
-        </div>
-      </section>
+        <div class="emergency-inline"><i aria-hidden="true"></i> Em situação de emergência: <strong>112</strong></div>
+      </div>
 
-      <section class="survey-section" aria-labelledby="escolher">
-        <div class="survey-head">
-          <h2 id="escolher">Escolhe o questionário adequado</h2>
-          <p>Existem duas versões, adaptadas à realidade de cada grupo.</p>
-          <div class="survey-emphasis">Os dois questionários são anónimos.</div>
-        </div>
+      <div class="support-grid">
+        <article class="support-card">
+          <div class="icon">🧠</div>
+          <h3>Saúde mental e bem-estar</h3>
+          <p><strong>SNS 24 — 808 24 24 24</strong><br>Informação e orientação em saúde.</p>
+          <a href="https://www.sns24.gov.pt/" target="_blank" rel="noopener noreferrer">Ir para o SNS 24 →</a>
+        </article>
 
-        <div class="cards">
-          <article class="card school">
-            <span class="pill">🎓 Contexto escolar</span>
-            <h3>Questionário 14+</h3>
-            <p>Para jovens com <strong>14 ou mais anos que frequentam um estabelecimento de ensino</strong>, incluindo alunos com 18 anos ou mais.</p>
-            <div class="meta"><span>🔒 Anónimo</span><span>⏱️ 6–8 min</span><span>💬 A tua opinião conta</span></div>
-            <p class="note"><strong>Tens 18 anos ou mais e ainda estudas?</strong> Se frequentas um estabelecimento de ensino, responde a esta versão.</p>
-            <div class="spacer"></div>
-            <a class="cta" href="https://docs.google.com/forms/d/1Hlvp6TDhH1MXH_SeUKsv_bv7-NNcRSjzOM2Em3Ux62c/viewform" target="_blank" rel="noopener noreferrer"><span>Responder ao questionário 14+</span><span>→</span></a>
-          </article>
+        <article class="support-card">
+          <div class="icon">❤️</div>
+          <h3>Saúde sexual e reprodutiva</h3>
+          <p><strong>Sexualidade em Linha — 800 222 003</strong><br>Serviço técnico, anónimo e confidencial do IPDJ.</p>
+          <a href="https://ipdj.gov.pt/sexualidade-em-linha" target="_blank" rel="noopener noreferrer">Sexualidade em Linha →</a>
+        </article>
 
-          <article class="card adult">
-            <span class="pill">👥 Jovens adultos</span>
-            <h3>Questionário 18–35</h3>
-            <p>Para jovens com idades compreendidas entre os <strong>18 e os 35 anos</strong>, com perguntas adaptadas à realidade adulta, profissional e académica.</p>
-            <div class="meta"><span>🔒 Anónimo</span><span>⏱️ 6–8 min</span><span>💬 A tua opinião conta</span></div>
-            <p class="note"><strong>Esta é a versão geral.</strong> Se tens 18+ mas estás em contexto escolar, utiliza o questionário 14+.</p>
-            <div class="spacer"></div>
-            <a class="cta" href="https://docs.google.com/forms/d/18HA-TBj0mkaYaFF-Y9zkT-DirxneFkQiq82Xs7GB3as/viewform" target="_blank" rel="noopener noreferrer"><span>Responder ao questionário 18–35</span><span>→</span></a>
-          </article>
-        </div>
-      </section>
+        <article class="support-card">
+          <div class="icon">⚠️</div>
+          <h3>Comportamentos aditivos</h3>
+          <p>Informação oficial sobre prevenção, redução de riscos e respostas na área das dependências.</p>
+          <a href="https://sicad.pt/" target="_blank" rel="noopener noreferrer">Consultar SICAD →</a>
+        </article>
 
-      <section class="support" aria-labelledby="apoio">
-        <div class="support-head">
-          <p class="section-kicker">Informação e apoio</p>
-          <h2 id="apoio">Precisas de informação ou ajuda?</h2>
-          <p>Estes recursos podem ajudar-te a esclarecer dúvidas, procurar apoio ou saber onde recorrer. São ligações para entidades e serviços oficiais.</p>
-        </div>
-
-        <div class="support-grid">
-          <article class="support-card">
-            <div class="support-icon">🧠</div>
-            <h3>Saúde mental e bem-estar</h3>
-            <p><strong>SNS 24 — 808 24 24 24</strong><br>Linha Nacional de Prevenção do Suicídio e Apoio Psicológico: <strong>1411</strong>.</p>
-            <a class="support-link" href="https://www.sns24.gov.pt/guia/prevencao-do-suicidio/" target="_blank" rel="noopener noreferrer">Consultar SNS 24 →</a>
-          </article>
-
-          <article class="support-card">
-            <div class="support-icon">❤️</div>
-            <h3>Saúde sexual e reprodutiva</h3>
-            <p><strong>Sexualidade em Linha — 800 222 003</strong><br>Informação e aconselhamento anónimo e confidencial.</p>
-            <a class="support-link" href="https://ipdj.gov.pt/sexualidade-em-linha" target="_blank" rel="noopener noreferrer">Consultar IPDJ →</a>
-          </article>
-
-          <article class="support-card">
-            <div class="support-icon">⚠️</div>
-            <h3>Comportamentos aditivos</h3>
-            <p><strong>Linha Vida — 1414</strong><br>Apoio, aconselhamento e informação sobre álcool, drogas e outras dependências.</p>
-            <a class="support-link" href="https://sicad.pt/" target="_blank" rel="noopener noreferrer">Consultar SICAD →</a>
-          </article>
-
-          <article class="support-card">
-            <div class="support-icon">🤝</div>
-            <h3>Relações e violência</h3>
-            <p><strong>APAV — 116 006</strong><br>Apoio gratuito e confidencial a vítimas de crime ou violência, familiares e amigos.</p>
-            <a class="support-link" href="https://apav.pt/linha-de-apoio-a-vitima-116-006" target="_blank" rel="noopener noreferrer">Consultar APAV →</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="privacy" aria-label="Informação sobre a participação">
-        <div class="privacy-card">
-          <h3>🔒 Privacidade e anonimato</h3>
-          <p>Não é solicitado nome, email, telefone ou qualquer outro elemento de identificação direta. As respostas serão analisadas apenas de forma conjunta.</p>
-        </div>
-        <div class="privacy-card">
-          <h3>📊 Para que servem as respostas?</h3>
-          <p>Os resultados vão ajudar a identificar necessidades, aspetos positivos e prioridades de intervenção para os jovens do concelho de Gouveia.</p>
-        </div>
-      </section>
-
-      <section class="emergency">
-        <strong>Em situação de emergência ou risco imediato, liga 112.</strong>
-        <span>Não esperes pela resposta a um questionário ou por contacto através desta página.</span>
-      </section>
-
-      <section class="links" aria-label="Links úteis">
-        <h3>Links úteis</h3>
-        <div class="link-row">
-          <a href="https://www.cm-gouveia.pt/" target="_blank" rel="noopener noreferrer">Município de Gouveia</a>
-          <a href="https://www.sns24.gov.pt/" target="_blank" rel="noopener noreferrer">SNS 24</a>
-          <a href="https://ipdj.gov.pt/" target="_blank" rel="noopener noreferrer">IPDJ</a>
-          <a href="https://70ja.ipdj.gov.pt/saude-ja" target="_blank" rel="noopener noreferrer">Saúde Já / Cuida-te</a>
-          <a href="https://sicad.pt/" target="_blank" rel="noopener noreferrer">SICAD</a>
-          <a href="https://apav.pt/" target="_blank" rel="noopener noreferrer">APAV</a>
-        </div>
-      </section>
+        <article class="support-card">
+          <div class="icon">🤝</div>
+          <h3>Relações e violência</h3>
+          <p><strong>APAV — 116 006</strong><br>Apoio gratuito e confidencial a vítimas de crime ou violência, familiares e amigos.</p>
+          <a href="https://apav.pt/linha-de-apoio-a-vitima-116-006" target="_blank" rel="noopener noreferrer">Linha de Apoio à Vítima →</a>
+        </article>
+      </div>
     </div>
-  </main>
+  </section>
 
-  <footer><div class="shell">Município de Gouveia · Conselho Municipal da Juventude de Gouveia · Saúde e Bem-Estar Jovem</div></footer>
+  <div class="shell">
+    <section class="trust" aria-label="Compromissos do questionário">
+      <div class="trust-item"><strong>🔒 Anonimato</strong><span>Não são recolhidos elementos de identificação direta.</span></div>
+      <div class="trust-item"><strong>🙋 Participação voluntária</strong><span>Podes optar por não responder a perguntas opcionais e abandonar antes de submeter.</span></div>
+      <div class="trust-item"><strong>📈 Análise conjunta</strong><span>O objetivo é compreender tendências e necessidades, não identificar respostas individuais.</span></div>
+    </section>
+
+    <section class="links" aria-label="Links úteis">
+      <h3>Links úteis</h3>
+      <div class="link-row">
+        <a href="https://www.cm-gouveia.pt/" target="_blank" rel="noopener noreferrer">Município de Gouveia</a>
+        <a href="https://www.sns24.gov.pt/" target="_blank" rel="noopener noreferrer">SNS 24</a>
+        <a href="https://ipdj.gov.pt/" target="_blank" rel="noopener noreferrer">IPDJ</a>
+        <a href="https://70ja.ipdj.gov.pt/saude-ja" target="_blank" rel="noopener noreferrer">Saúde Já / Cuida-te</a>
+        <a href="https://sicad.pt/" target="_blank" rel="noopener noreferrer">SICAD</a>
+        <a href="https://apav.pt/" target="_blank" rel="noopener noreferrer">APAV</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer><div class="shell">Município de Gouveia · Conselho Municipal da Juventude de Gouveia · Saúde e Bem-Estar Jovem</div></footer>
 </body>
 </html>
