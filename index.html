@@ -91,7 +91,10 @@ img{
 ========================= */
 
 main{
-  padding:38px 0 56px;
+  position:relative;
+  margin-top:-34px;
+  padding:0 0 56px;
+  z-index:2;
 }
 
 .section{
@@ -136,6 +139,10 @@ main{
   grid-template-columns:1.1fr .9fr;
   gap:48px;
   align-items:start;
+  background:rgba(247,251,253,.97);
+  border-radius:24px;
+  padding:28px;
+  box-shadow:0 12px 30px rgba(11,63,105,.08);
 }
 
 .about-main p{
@@ -641,8 +648,13 @@ a:focus-visible{
   }
 
   main{
-    padding-top:30px;
-  }
+  margin-top:-16px;
+}
+
+.about{
+  padding:20px;
+  border-radius:18px;
+}
 
   .support-grid{
     grid-template-columns:1fr;
