@@ -3,7 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Saúde e Bem-Estar Jovem — diagnóstico promovido pelo Município de Gouveia e pelo Conselho Municipal da Juventude de Gouveia.">
+
+<meta
+  name="description"
+  content="Saúde e Bem-Estar Jovem — diagnóstico promovido pelo Município de Gouveia e pelo Conselho Municipal da Juventude de Gouveia."
+>
+
 <meta name="theme-color" content="#0b4f7d">
 
 <title>Saúde e Bem-Estar Jovem | Concelho de Gouveia</title>
@@ -37,7 +42,14 @@ body{
   margin:0;
   background:var(--bg);
   color:var(--ink);
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   line-height:1.55;
 }
 
@@ -56,9 +68,9 @@ img{
 }
 
 
-/* =========================
-   HEADER / BANNER
-========================= */
+/* =====================================================
+   HEADER
+===================================================== */
 
 .hero-banner{
   width:100%;
@@ -86,9 +98,9 @@ img{
 }
 
 
-/* =========================
+/* =====================================================
    CONTEÚDO
-========================= */
+===================================================== */
 
 main{
   position:relative;
@@ -130,9 +142,9 @@ main{
 }
 
 
-/* =========================
+/* =====================================================
    SOBRE
-========================= */
+===================================================== */
 
 .about{
   display:grid;
@@ -187,9 +199,9 @@ main{
 }
 
 
-/* =========================
+/* =====================================================
    QUESTIONÁRIOS
-========================= */
+===================================================== */
 
 .survey-head{
   text-align:center;
@@ -354,14 +366,18 @@ main{
 }
 
 
-/* =========================
+/* =====================================================
    INFORMAÇÃO E APOIO
-========================= */
+===================================================== */
 
 .support-band{
   margin-top:52px;
   padding:52px 0;
-  background:linear-gradient(180deg,#eaf6fb 0%,#f6fbfd 100%);
+  background:linear-gradient(
+    180deg,
+    #eaf6fb 0%,
+    #f6fbfd 100%
+  );
   border-top:1px solid #d9eaf2;
   border-bottom:1px solid #d9eaf2;
 }
@@ -503,9 +519,9 @@ main{
 }
 
 
-/* =========================
+/* =====================================================
    CONFIANÇA
-========================= */
+===================================================== */
 
 .trust{
   display:grid;
@@ -533,73 +549,73 @@ main{
 }
 
 
-/* =========================
+/* =====================================================
    LINKS ÚTEIS
-========================= */
+===================================================== */
 
 .links{
-  margin-top:42px;
-  padding:28px;
-  border:1px solid #dce8ee;
-  border-radius:22px;
-  background:#fff;
-  box-shadow:0 10px 28px rgba(11,63,105,.05);
-}
-
-.links h3{
-  margin:0;
-  color:var(--navy2);
-  font-size:1.12rem;
-}
-
-.links-sub{
-  margin:6px 0 18px;
-  color:var(--muted);
-  font-size:.88rem;
+  margin-top:26px;
+  display:flex;
+  justify-content:center;
 }
 
 .link-row{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:7px 12px;
+  border-top:1px solid #dce8ee;
+  border-bottom:1px solid #dce8ee;
+}
+
+.links-label{
+  padding:3px 13px 3px 3px;
+  margin-right:3px;
+  color:#8798a2;
+  font-size:.68rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
 }
 
 .link-row a{
-  display:flex;
+  position:relative;
+  display:inline-flex;
   align-items:center;
-  justify-content:space-between;
-  gap:10px;
-  min-height:54px;
-  padding:13px 15px;
-  border:1px solid #dce9f0;
-  border-radius:15px;
-  background:linear-gradient(180deg,#f8fcfe 0%,#eef6fa 100%);
-  color:#2d566d;
-  font-size:.84rem;
-  font-weight:780;
+  justify-content:center;
+  padding:3px 12px;
+  color:#48697a;
+  font-size:.76rem;
+  font-weight:700;
+  line-height:1.4;
   text-decoration:none;
-  transition:.18s ease;
+  transition:.15s ease;
 }
 
-.link-row a:after{
-  content:"→";
-  color:#0b70aa;
-  font-weight:900;
+.link-row a + a:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:50%;
+  width:3px;
+  height:3px;
+  border-radius:50%;
+  background:#b9c9d1;
+  transform:translate(-50%,-50%);
 }
 
 .link-row a:hover{
-  transform:translateY(-2px);
-  background:#eaf5fa;
-  box-shadow:0 8px 18px rgba(11,63,105,.06);
+  color:#0b70aa;
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
-  padding:24px 0 32px;
+  padding:22px 0 30px;
   color:#728592;
   text-align:center;
   font-size:.78rem;
@@ -611,9 +627,9 @@ a:focus-visible{
 }
 
 
-/* =========================
+/* =====================================================
    RESPONSIVO
-========================= */
+===================================================== */
 
 @media(max-width:1100px){
 
@@ -635,10 +651,6 @@ a:focus-visible{
     flex-direction:column;
   }
 
-  .link-row{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-
 }
 
 @media(max-width:650px){
@@ -648,25 +660,41 @@ a:focus-visible{
   }
 
   main{
-  margin-top:-16px;
-  .link-row{justify-content:flex-start}
-}
+    margin-top:-16px;
+  }
 
-.about{
-  padding:20px;
-  border-radius:18px;
-}
+  .about{
+    padding:20px;
+    border-radius:18px;
+  }
 
   .support-grid{
     grid-template-columns:1fr;
   }
 
-  .link-row{
+  .trust{
     grid-template-columns:1fr;
   }
 
-  .trust{
-    grid-template-columns:1fr;
+  .links{
+    margin-top:22px;
+  }
+
+  .link-row{
+    padding:7px 6px;
+    row-gap:4px;
+  }
+
+  .links-label{
+    width:100%;
+    margin:0;
+    padding:2px 0 4px;
+    text-align:center;
+  }
+
+  .link-row a{
+    padding:3px 9px;
+    font-size:.74rem;
   }
 
 }
@@ -688,20 +716,26 @@ a:focus-visible{
 
 <!-- HEADER -->
 <header class="hero-banner">
+
   <img
     src="assets/banner-header.png"
     alt="Saúde e Bem-Estar Jovem — Diagnóstico Jovem · Concelho de Gouveia"
   >
+
 </header>
 
 
 <main>
 
+
 <div class="shell">
 
 
 <!-- SOBRE -->
-<section class="section about" aria-labelledby="sobre">
+<section
+  class="section about"
+  aria-labelledby="sobre"
+>
 
   <div class="about-main">
 
@@ -709,27 +743,32 @@ a:focus-visible{
       Sobre este diagnóstico
     </p>
 
-    <h2 class="section-title" id="sobre">
+    <h2
+      class="section-title"
+      id="sobre"
+    >
       Ouvir para compreender.<br>
       Compreender para melhorar.
     </h2>
 
     <p>
-      Este diagnóstico pretende conhecer necessidades, dificuldades,
-      aspetos positivos e oportunidades de melhoria nas áreas da saúde
-      e do bem-estar juvenil no concelho de Gouveia.
+      Este diagnóstico pretende conhecer necessidades,
+      dificuldades, aspetos positivos e oportunidades
+      de melhoria nas áreas da saúde e do bem-estar
+      juvenil no concelho de Gouveia.
     </p>
 
     <p>
-      As respostas serão analisadas de forma conjunta e vão ajudar
-      a apoiar o planeamento de futuras ações e respostas dirigidas
-      aos jovens.
+      As respostas serão analisadas de forma conjunta
+      e vão ajudar a apoiar o planeamento de futuras
+      ações e respostas dirigidas aos jovens.
     </p>
 
   </div>
 
 
   <div class="about-points">
+
 
     <div class="point">
 
@@ -744,7 +783,8 @@ a:focus-visible{
         </strong>
 
         <span>
-          Não precisas de estar a passar por um problema para participar.
+          Não precisas de estar a passar por um problema
+          para participar.
         </span>
 
       </div>
@@ -765,7 +805,8 @@ a:focus-visible{
         </strong>
 
         <span>
-          Não é pedido nome, email, telefone ou outro elemento de identificação direta.
+          Não é pedido nome, email, telefone ou outro
+          elemento de identificação direta.
         </span>
 
       </div>
@@ -794,6 +835,7 @@ a:focus-visible{
 
     </div>
 
+
   </div>
 
 </section>
@@ -801,7 +843,10 @@ a:focus-visible{
 
 
 <!-- QUESTIONÁRIOS -->
-<section class="section" aria-labelledby="questionarios">
+<section
+  class="section"
+  aria-labelledby="questionarios"
+>
 
   <div class="survey-head">
 
@@ -809,7 +854,10 @@ a:focus-visible{
       Participa
     </p>
 
-    <h2 class="section-title" id="questionarios">
+    <h2
+      class="section-title"
+      id="questionarios"
+    >
       Escolhe o questionário adequado
     </h2>
 
@@ -824,7 +872,7 @@ a:focus-visible{
   <div class="cards">
 
 
-    <!-- 14+ -->
+    <!-- QUESTIONÁRIO 14+ -->
     <article class="card school">
 
       <span class="pill">
@@ -836,25 +884,31 @@ a:focus-visible{
       </h3>
 
       <p>
-        Para jovens com <strong>14 ou mais anos que frequentam
-        um estabelecimento de ensino</strong>, incluindo alunos
-        com 18 anos ou mais.
+        Para jovens com
+        <strong>
+          14 ou mais anos que frequentam
+          um estabelecimento de ensino
+        </strong>,
+        incluindo alunos com 18 anos ou mais.
       </p>
 
       <div class="meta">
 
         <span>🔒 Anónimo</span>
-
         <span>⏱️ 6–8 min</span>
-
         <span>💬 A tua opinião conta</span>
 
       </div>
 
       <p class="note">
-        <strong>Tens 18 anos ou mais e ainda estudas?</strong>
+
+        <strong>
+          Tens 18 anos ou mais e ainda estudas?
+        </strong>
+
         Se frequentas um estabelecimento de ensino,
         responde a esta versão.
+
       </p>
 
       <div class="spacer"></div>
@@ -880,7 +934,7 @@ a:focus-visible{
 
 
 
-    <!-- 18-35 -->
+    <!-- QUESTIONÁRIO 18-35 -->
     <article class="card adult">
 
       <span class="pill">
@@ -893,24 +947,28 @@ a:focus-visible{
 
       <p>
         Para jovens com idades compreendidas entre os
-        <strong>18 e os 35 anos</strong>, com perguntas adaptadas
-        à realidade adulta, profissional e académica.
+        <strong>18 e os 35 anos</strong>,
+        com perguntas adaptadas à realidade adulta,
+        profissional e académica.
       </p>
 
       <div class="meta">
 
         <span>🔒 Anónimo</span>
-
         <span>⏱️ 6–8 min</span>
-
         <span>💬 A tua opinião conta</span>
 
       </div>
 
       <p class="note">
-        <strong>Esta é a versão geral.</strong>
+
+        <strong>
+          Esta é a versão geral.
+        </strong>
+
         Se tens 18+ mas estás em contexto escolar,
         utiliza o questionário 14+.
+
       </p>
 
       <div class="spacer"></div>
@@ -945,7 +1003,10 @@ a:focus-visible{
 
 
 <!-- INFORMAÇÃO E APOIO -->
-<section class="support-band" aria-labelledby="apoio">
+<section
+  class="support-band"
+  aria-labelledby="apoio"
+>
 
 <div class="shell">
 
@@ -958,7 +1019,10 @@ a:focus-visible{
       Informação e apoio
     </p>
 
-    <h2 class="section-title" id="apoio">
+    <h2
+      class="section-title"
+      id="apoio"
+    >
       Onde podes procurar informação ou ajuda
     </h2>
 
@@ -1000,7 +1064,9 @@ a:focus-visible{
   </h3>
 
   <p>
-    <strong>SNS 24 — 808 24 24 24</strong>
+    <strong>
+      SNS 24 — 808 24 24 24
+    </strong>
     <br>
     Informação e orientação em saúde.
   </p>
@@ -1028,6 +1094,7 @@ a:focus-visible{
   </h3>
 
   <p>
+
     <strong>
       Sexualidade em Linha — 800 222 003
     </strong>
@@ -1035,6 +1102,7 @@ a:focus-visible{
     <br>
 
     Serviço técnico, anónimo e confidencial do IPDJ.
+
   </p>
 
   <a
@@ -1061,7 +1129,8 @@ a:focus-visible{
 
   <p>
     Informação oficial sobre prevenção,
-    redução de riscos e respostas na área das dependências.
+    redução de riscos e respostas na área
+    das dependências.
   </p>
 
   <a
@@ -1087,14 +1156,16 @@ a:focus-visible{
   </h3>
 
   <p>
+
     <strong>
       APAV — 116 006
     </strong>
 
     <br>
 
-    Apoio gratuito e confidencial a vítimas de crime
-    ou violência, familiares e amigos.
+    Apoio gratuito e confidencial a vítimas
+    de crime ou violência, familiares e amigos.
+
   </p>
 
   <a
@@ -1120,7 +1191,10 @@ a:focus-visible{
 
 
 <!-- CONFIANÇA -->
-<section class="trust" aria-label="Compromissos do questionário">
+<section
+  class="trust"
+  aria-label="Compromissos do questionário"
+>
 
 <div class="trust-item">
 
@@ -1129,7 +1203,8 @@ a:focus-visible{
   </strong>
 
   <span>
-    Não são recolhidos elementos de identificação direta.
+    Não são recolhidos elementos
+    de identificação direta.
   </span>
 
 </div>
@@ -1142,8 +1217,9 @@ a:focus-visible{
   </strong>
 
   <span>
-    Podes optar por não responder a perguntas opcionais
-    e abandonar antes de submeter.
+    Podes optar por não responder
+    a perguntas opcionais e abandonar
+    antes de submeter.
   </span>
 
 </div>
@@ -1156,8 +1232,9 @@ a:focus-visible{
   </strong>
 
   <span>
-    O objetivo é compreender tendências e necessidades,
-    não identificar respostas individuais.
+    O objetivo é compreender tendências
+    e necessidades, não identificar
+    respostas individuais.
   </span>
 
 </div>
@@ -1166,16 +1243,68 @@ a:focus-visible{
 
 
 
-<!-- LINKS -->
-<section class="links" aria-label="Links úteis">
+<!-- LINKS ÚTEIS -->
+<section
+  class="links"
+  aria-label="Links úteis"
+>
+
   <div class="link-row">
-    <a href="https://www.cm-gouveia.pt/" target="_blank" rel="noopener noreferrer">Município</a>
-    <a href="https://www.sns24.gov.pt/" target="_blank" rel="noopener noreferrer">SNS 24</a>
-    <a href="https://ipdj.gov.pt/" target="_blank" rel="noopener noreferrer">IPDJ</a>
-    <a href="https://70ja.ipdj.gov.pt/saude-ja" target="_blank" rel="noopener noreferrer">Cuida-te</a>
-    <a href="https://sicad.pt/" target="_blank" rel="noopener noreferrer">SICAD</a>
-    <a href="https://apav.pt/" target="_blank" rel="noopener noreferrer">APAV</a>
+
+    <span class="links-label">
+      Links úteis
+    </span>
+
+    <a
+      href="https://www.cm-gouveia.pt/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Município
+    </a>
+
+    <a
+      href="https://www.sns24.gov.pt/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      SNS 24
+    </a>
+
+    <a
+      href="https://ipdj.gov.pt/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      IPDJ
+    </a>
+
+    <a
+      href="https://70ja.ipdj.gov.pt/saude-ja"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Cuida-te
+    </a>
+
+    <a
+      href="https://sicad.pt/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      SICAD
+    </a>
+
+    <a
+      href="https://apav.pt/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      APAV
+    </a>
+
   </div>
+
 </section>
 
 
