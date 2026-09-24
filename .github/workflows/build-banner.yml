@@ -3,7 +3,7 @@ name: Build final banner
 on:
   push:
     paths:
-      - 'assets/banner-b64/3.txt'
+      - 'assets/header-b64/07.txt'
 
 permissions:
   contents: write
@@ -13,15 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Rebuild banner image
+      - name: Rebuild final header image
         run: |
-          mkdir -p assets
-          cat assets/banner-b64/0.txt assets/banner-b64/1.txt assets/banner-b64/2.txt assets/banner-b64/3.txt | tr -d '\n' | base64 -d > assets/banner-header.jpg
-          rm -rf assets/banner-b64
-      - name: Commit banner
+          cat assets/header-b64/00.txt assets/header-b64/01.txt assets/header-b64/02.txt assets/header-b64/03.txt assets/header-b64/04.txt assets/header-b64/05.txt assets/header-b64/06.txt assets/header-b64/07.txt | tr -d '\n' | base64 -d > assets/banner-header.avif
+          rm -rf assets/header-b64 assets/banner-b64 assets/banner-chunks
+          rm -f assets/banner-header.jpg assets/banner-saude-gouveia.jpg assets/logos-topo.webp
+      - name: Commit final banner
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/banner-header.jpg assets/banner-b64
-          git commit -m "Adicionar banner final ao cabeçalho" || exit 0
+          git add -A
+          git commit -m "Finalizar banner do cabeçalho" || exit 0
           git push
