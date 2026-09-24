@@ -8,51 +8,80 @@
   <title>Saúde e Bem-Estar Jovem | Concelho de Gouveia</title>
   <style>
     :root{
-      --navy:#0b3f69;--navy2:#062d4c;--blue:#168fc9;--sky:#6dc8ec;
-      --orange:#e97924;--ink:#15364c;--muted:#637987;--line:#d8e7ef;
-      --bg:#f7fbfd;--white:#fff;--shadow:0 16px 42px rgba(11,63,105,.11);--radius:24px;
+      --navy:#0b3f69;--navy2:#062d4c;--blue:#168fc9;--sky:#74cbed;
+      --orange:#e97924;--orange2:#c95c12;--ink:#15364c;--muted:#607787;
+      --line:#d9e8f0;--bg:#f6fafc;--white:#fff;--shadow:0 16px 42px rgba(11,63,105,.10);
+      --radius:24px;
     }
     *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
-    .shell{width:min(1120px,calc(100% - 40px));margin-inline:auto}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.52}
+    a{color:inherit}
     img{display:block;max-width:100%}
+    .shell{width:min(1160px,calc(100% - 40px));margin-inline:auto}
 
-    .hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(135deg,#0a355b 0%,#0d5f91 58%,#1597d4 100%);border-bottom:1px solid #0a4b73}
-    .hero:before{content:"";position:absolute;left:-120px;bottom:-150px;width:500px;height:220px;border-radius:50%;background:rgba(255,255,255,.08);transform:rotate(-10deg)}
+    .hero{
+      position:relative;overflow:hidden;color:#fff;
+      background:
+        radial-gradient(circle at 86% 12%,rgba(116,203,237,.22),transparent 28%),
+        linear-gradient(135deg,#082e4f 0%,#0b5f91 55%,#158fc7 100%);
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    .hero:before{
+      content:"";position:absolute;left:-120px;bottom:-160px;width:520px;height:230px;
+      border-radius:50%;background:rgba(255,255,255,.07);transform:rotate(-10deg)
+    }
     .hero-inner{
       position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) auto;
-      gap:42px;align-items:center;min-height:315px;padding:34px 0 36px;
+      gap:46px;align-items:center;min-height:330px;padding:34px 0 36px;
     }
-    .hero-copy{max-width:700px}
-    .eyebrow{margin:0 0 8px;color:#d8f2ff;font-weight:850;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
-    h1{margin:0;color:#fff;font-size:clamp(2.7rem,5vw,4.65rem);line-height:.93;letter-spacing:-.055em}
-    h1 span{color:#9fe2ff}
-    .lead{margin:15px 0 0;max-width:700px;color:#e6f5fc;font-size:1rem}
-    .topic-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}
-    .topic{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(255,255,255,.10);color:#fff;font-size:.78rem;font-weight:750}
+    .eyebrow{margin:0 0 8px;color:#d7f2ff;font-weight:850;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+    h1{margin:0;font-size:clamp(2.85rem,5vw,4.8rem);line-height:.93;letter-spacing:-.055em}
+    h1 span{color:#a8e6ff}
+    .lead{margin:16px 0 0;max-width:720px;color:#e7f5fb;font-size:1.02rem}
+    .hero-note{margin:12px 0 0;color:#cdebf8;font-size:.92rem;font-weight:650}
+    .topic-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .topic{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(255,255,255,.1);font-size:.78rem;font-weight:750}
 
-    .brands{width:410px;display:flex;flex-direction:row;align-items:center;justify-content:flex-end;gap:22px;padding:0;background:transparent;border:0;box-shadow:none;backdrop-filter:none}
-    .municipio-logo{width:205px;height:auto;object-fit:contain}
+    .brands{width:430px;display:flex;align-items:center;justify-content:flex-end;gap:22px}
+    .municipio-logo{width:220px;height:auto;object-fit:contain}
     .brand-divider{width:1px;height:88px;background:rgba(255,255,255,.28)}
-    .cmj-logo{width:170px;height:auto;object-fit:contain}
+    .cmj-logo{width:180px;height:auto;object-fit:contain}
 
-    main{padding:34px 0 52px}
-    .intro{text-align:center;max-width:760px;margin:0 auto 22px}
-    .intro h2{margin:0;color:var(--navy2);font-size:clamp(1.75rem,3vw,2.35rem);line-height:1.05;letter-spacing:-.035em}
-    .intro p{margin:8px 0 0;color:var(--muted);font-size:.95rem}
+    main{padding:34px 0 54px}
+    .intro-block{
+      display:grid;grid-template-columns:1.05fr .95fr;gap:18px;
+      margin-bottom:28px;
+    }
+    .intro-card,.purpose-card{
+      padding:24px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 8px 28px rgba(11,63,105,.05)
+    }
+    .section-kicker{margin:0 0 7px;color:#1884bd;font-size:.75rem;font-weight:850;letter-spacing:.11em;text-transform:uppercase}
+    .intro-card h2,.purpose-card h2,.support-head h2{
+      margin:0;color:var(--navy2);font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.06;letter-spacing:-.035em
+    }
+    .intro-card p,.purpose-card p{margin:10px 0 0;color:var(--muted);font-size:.94rem}
+    .purpose-list{display:grid;gap:9px;margin-top:14px}
+    .purpose-item{display:flex;gap:9px;align-items:flex-start;color:#456174;font-size:.9rem}
+    .purpose-item b{color:var(--navy2)}
+
+    .survey-section{margin-top:4px}
+    .survey-head{text-align:center;max-width:760px;margin:0 auto 22px}
+    .survey-head h2{margin:0;color:var(--navy2);font-size:clamp(1.8rem,3vw,2.4rem);line-height:1.05;letter-spacing:-.035em}
+    .survey-head p{margin:8px 0 0;color:var(--muted);font-size:.94rem}
+    .survey-emphasis{margin-top:8px;color:#0b5f91;font-weight:780;font-size:.9rem}
 
     .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:stretch}
-    .card{
-      position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:315px;
-      padding:24px;border-radius:var(--radius);background:#fff;box-shadow:var(--shadow)
-    }
+    .card{position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:320px;padding:24px;border-radius:var(--radius);background:#fff;box-shadow:var(--shadow)}
     .school{border:1px solid #cde7f4}.adult{border:1px solid #f0d6c3}
     .card:after{content:"";position:absolute;width:190px;height:190px;right:-78px;top:-82px;border-radius:50%;opacity:.1}
     .school:after{background:var(--blue)}.adult:after{background:var(--orange)}
     .pill{position:relative;z-index:1;align-self:flex-start;padding:6px 10px;border-radius:999px;font-size:.7rem;font-weight:850;letter-spacing:.04em;text-transform:uppercase}
     .school .pill{color:#0a608f;background:#e8f6fd}.adult .pill{color:#a8450e;background:#fff1e6}
-    .card h3{position:relative;z-index:1;margin:17px 0 8px;color:var(--navy2);font-size:1.75rem;line-height:1.04;letter-spacing:-.035em}
+    .card h3{position:relative;z-index:1;margin:17px 0 8px;color:var(--navy2);font-size:1.8rem;line-height:1.03;letter-spacing:-.035em}
     .card p{position:relative;z-index:1;margin:0;color:#5a7181;font-size:.93rem}
+    .meta{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}
+    .meta span{padding:6px 8px;border-radius:999px;background:#f4f8fa;color:#587081;font-size:.75rem;font-weight:700}
     .card .note{margin-top:13px;padding:10px 12px;border-radius:13px;font-size:.82rem}
     .school .note{background:#f0f9fd;color:#365c71}.adult .note{background:#fff7f0;color:#75513d}
     .spacer{flex:1}
@@ -62,56 +91,80 @@
     .cta:hover{transform:translateY(-2px)}
     .cta span:last-child{font-size:1.3rem}
 
-    .info{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
-    .info-card{padding:18px 20px;border:1px solid var(--line);border-radius:18px;background:#fff}
-    .info-card h3{margin:0 0 6px;color:var(--navy2);font-size:1rem}
-    .info-card p{margin:0;color:var(--muted);font-size:.86rem}
+    .support{margin-top:34px;padding-top:4px}
+    .support-head{text-align:center;max-width:780px;margin:0 auto 20px}
+    .support-head p{margin:9px 0 0;color:var(--muted);font-size:.94rem}
+    .support-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .support-card{
+      min-height:205px;display:flex;flex-direction:column;padding:18px;border:1px solid var(--line);
+      border-radius:20px;background:#fff;box-shadow:0 8px 24px rgba(11,63,105,.05)
+    }
+    .support-icon{font-size:1.4rem}
+    .support-card h3{margin:12px 0 7px;color:var(--navy2);font-size:1.05rem;line-height:1.15}
+    .support-card p{margin:0;color:var(--muted);font-size:.83rem}
+    .support-card strong{color:#294f67}
+    .support-link{margin-top:auto;padding-top:15px;color:#0b6fa8;font-size:.82rem;font-weight:850;text-decoration:none}
+    .support-link:hover{text-decoration:underline}
 
-    .closing{margin-top:20px;padding:20px 24px;border-radius:20px;color:#fff;text-align:center;background:linear-gradient(135deg,#0a355b,#0f71aa)}
-    .closing strong{font-size:1.08rem}
-    .closing span{display:block;margin-top:4px;color:#eaf7fc;font-size:.86rem}
+    .privacy{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+    .privacy-card{padding:18px 20px;border:1px solid var(--line);border-radius:18px;background:#fff}
+    .privacy-card h3{margin:0 0 6px;color:var(--navy2);font-size:1rem}
+    .privacy-card p{margin:0;color:var(--muted);font-size:.86rem}
 
-    footer{padding:21px 0 28px;color:#728592;text-align:center;font-size:.8rem}
+    .emergency{
+      margin-top:22px;padding:16px 18px;border-radius:18px;color:#fff;
+      background:linear-gradient(135deg,#8f2635,#c94455);text-align:center
+    }
+    .emergency strong{font-size:1rem}
+    .emergency span{display:block;margin-top:3px;font-size:.84rem;color:#fff0f2}
+
+    .links{
+      margin-top:24px;padding:22px;border:1px solid var(--line);border-radius:20px;background:#fff
+    }
+    .links h3{margin:0 0 11px;color:var(--navy2);font-size:1.05rem}
+    .link-row{display:flex;flex-wrap:wrap;gap:9px}
+    .link-row a{padding:8px 10px;border-radius:999px;background:#f2f7fa;color:#315a72;font-size:.8rem;font-weight:760;text-decoration:none}
+    .link-row a:hover{background:#e7f2f8}
+
+    footer{padding:22px 0 30px;color:#728592;text-align:center;font-size:.8rem}
     a:focus-visible{outline:3px solid #f4a24a;outline-offset:4px}
 
-    @media(max-width:820px){
-      .hero-inner{grid-template-columns:1fr;gap:20px;min-height:auto;padding:26px 0 30px}
-      .brands{width:100%;justify-content:flex-start;gap:18px}
-      .brand-divider{height:70px}
-      .municipio-logo{width:190px}
-      .cmj-logo{width:155px}
+    @media(max-width:920px){
+      .hero-inner{grid-template-columns:1fr;gap:22px;min-height:auto;padding:28px 0 32px}
+      .brands{width:100%;justify-content:flex-start}
+      .intro-block{grid-template-columns:1fr}
+      .support-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
     }
-
-    @media(max-width:560px){
-      .shell{width:min(100% - 24px,1120px)}
+    @media(max-width:620px){
+      .shell{width:min(100% - 24px,1160px)}
       h1{font-size:clamp(2.55rem,13vw,3.7rem)}
-      .lead{font-size:.93rem}
+      .lead{font-size:.94rem}
       .topic{font-size:.7rem}
       .brands{gap:12px}
-      .municipio-logo{width:53%}
-      .cmj-logo{width:41%}
+      .municipio-logo{width:52%}
+      .cmj-logo{width:42%}
       .brand-divider{height:58px}
-      main{padding-top:26px}
-      .card{min-height:300px;padding:20px}
+      .privacy{grid-template-columns:1fr}
+      .support-grid{grid-template-columns:1fr}
     }
-
     @media(max-width:440px){
-      .cards,.info{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
   <header class="hero">
     <div class="shell hero-inner">
-      <div class="hero-copy">
+      <div>
         <p class="eyebrow">Diagnóstico Jovem · Concelho de Gouveia</p>
         <h1>Saúde e Bem-Estar <span>Jovem</span></h1>
-        <p class="lead">Queremos conhecer melhor como se sentem os jovens, as principais dificuldades que encontram, que apoios conhecem e o que consideram que pode ser melhorado no concelho de Gouveia.</p>
+        <p class="lead">O Município de Gouveia, através do Conselho Municipal da Juventude de Gouveia, quer ouvir os jovens do concelho e conhecer melhor a sua realidade.</p>
+        <p class="hero-note">Queremos perceber como te sentes, que dificuldades encontras, que apoios conheces e o que consideras importante melhorar.</p>
         <div class="topic-row" aria-label="Temas do diagnóstico">
-          <span class="topic">🧠 Saúde mental</span>
-          <span class="topic">❤️ Saúde sexual</span>
+          <span class="topic">🧠 Saúde mental e bem-estar</span>
+          <span class="topic">❤️ Saúde sexual e reprodutiva</span>
           <span class="topic">⚠️ Comportamentos aditivos</span>
-          <span class="topic">🤝 Relações e violência</span>
+          <span class="topic">🤝 Relações saudáveis e violência</span>
         </div>
       </div>
 
@@ -125,10 +178,30 @@
 
   <main>
     <div class="shell">
-      <section aria-labelledby="escolher">
-        <div class="intro">
+      <section class="intro-block" aria-label="Sobre o diagnóstico">
+        <div class="intro-card">
+          <p class="section-kicker">Porque estamos a fazer este diagnóstico?</p>
+          <h2>Queremos conhecer melhor a realidade dos jovens.</h2>
+          <p>Este diagnóstico pretende identificar necessidades, dificuldades, pontos positivos e oportunidades de melhoria nas áreas da saúde e do bem-estar juvenil no concelho de Gouveia.</p>
+          <p>As respostas serão analisadas de forma conjunta e servirão de base para pensar futuras ações, respostas e formas de apoio mais próximas daquilo que os jovens realmente precisam.</p>
+        </div>
+        <div class="purpose-card">
+          <p class="section-kicker">A tua participação conta</p>
+          <h2>Não precisas de estar a passar por um problema para participar.</h2>
+          <div class="purpose-list">
+            <div class="purpose-item"><span>✓</span><span><b>Queremos ouvir todos os jovens</b>, com diferentes experiências e realidades.</span></div>
+            <div class="purpose-item"><span>✓</span><span>O questionário é <b>anónimo e voluntário</b>.</span></div>
+            <div class="purpose-item"><span>✓</span><span>Demora cerca de <b>6–8 minutos</b>.</span></div>
+            <div class="purpose-item"><span>✓</span><span>Não existem respostas certas ou erradas — interessa-nos a tua opinião.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="survey-section" aria-labelledby="escolher">
+        <div class="survey-head">
           <h2 id="escolher">Escolhe o questionário adequado</h2>
-          <p>A participação é voluntária, anónima e demora cerca de 6–8 minutos.</p>
+          <p>Existem duas versões, adaptadas à realidade de cada grupo.</p>
+          <div class="survey-emphasis">Os dois questionários são anónimos.</div>
         </div>
 
         <div class="cards">
@@ -136,15 +209,17 @@
             <span class="pill">🎓 Contexto escolar</span>
             <h3>Questionário 14+</h3>
             <p>Para jovens com <strong>14 ou mais anos que frequentam um estabelecimento de ensino</strong>, incluindo alunos com 18 anos ou mais.</p>
+            <div class="meta"><span>🔒 Anónimo</span><span>⏱️ 6–8 min</span><span>💬 A tua opinião conta</span></div>
             <p class="note"><strong>Tens 18 anos ou mais e ainda estudas?</strong> Se frequentas um estabelecimento de ensino, responde a esta versão.</p>
             <div class="spacer"></div>
             <a class="cta" href="https://docs.google.com/forms/d/1Hlvp6TDhH1MXH_SeUKsv_bv7-NNcRSjzOM2Em3Ux62c/viewform" target="_blank" rel="noopener noreferrer"><span>Responder ao questionário 14+</span><span>→</span></a>
           </article>
 
           <article class="card adult">
-            <span class="pill">👥 18–35 anos</span>
+            <span class="pill">👥 Jovens adultos</span>
             <h3>Questionário 18–35</h3>
             <p>Para jovens com idades compreendidas entre os <strong>18 e os 35 anos</strong>, com perguntas adaptadas à realidade adulta, profissional e académica.</p>
+            <div class="meta"><span>🔒 Anónimo</span><span>⏱️ 6–8 min</span><span>💬 A tua opinião conta</span></div>
             <p class="note"><strong>Esta é a versão geral.</strong> Se tens 18+ mas estás em contexto escolar, utiliza o questionário 14+.</p>
             <div class="spacer"></div>
             <a class="cta" href="https://docs.google.com/forms/d/18HA-TBj0mkaYaFF-Y9zkT-DirxneFkQiq82Xs7GB3as/viewform" target="_blank" rel="noopener noreferrer"><span>Responder ao questionário 18–35</span><span>→</span></a>
@@ -152,24 +227,74 @@
         </div>
       </section>
 
-      <section class="info" aria-label="Informação sobre a participação">
-        <div class="info-card">
-          <h3>🔒 Participação anónima</h3>
-          <p>Não é solicitado nome, email, telefone ou qualquer outro elemento de identificação direta. As respostas serão analisadas apenas de forma conjunta.</p>
+      <section class="support" aria-labelledby="apoio">
+        <div class="support-head">
+          <p class="section-kicker">Informação e apoio</p>
+          <h2 id="apoio">Precisas de informação ou ajuda?</h2>
+          <p>Estes recursos podem ajudar-te a esclarecer dúvidas, procurar apoio ou saber onde recorrer. São ligações para entidades e serviços oficiais.</p>
         </div>
-        <div class="info-card">
-          <h3>⏱️ Rápido e voluntário</h3>
-          <p>Não existem respostas certas ou erradas. O objetivo é conhecer a realidade e as necessidades dos jovens do concelho.</p>
+
+        <div class="support-grid">
+          <article class="support-card">
+            <div class="support-icon">🧠</div>
+            <h3>Saúde mental e bem-estar</h3>
+            <p><strong>SNS 24 — 808 24 24 24</strong><br>Linha Nacional de Prevenção do Suicídio e Apoio Psicológico: <strong>1411</strong>.</p>
+            <a class="support-link" href="https://www.sns24.gov.pt/guia/prevencao-do-suicidio/" target="_blank" rel="noopener noreferrer">Consultar SNS 24 →</a>
+          </article>
+
+          <article class="support-card">
+            <div class="support-icon">❤️</div>
+            <h3>Saúde sexual e reprodutiva</h3>
+            <p><strong>Sexualidade em Linha — 800 222 003</strong><br>Informação e aconselhamento anónimo e confidencial.</p>
+            <a class="support-link" href="https://ipdj.gov.pt/sexualidade-em-linha" target="_blank" rel="noopener noreferrer">Consultar IPDJ →</a>
+          </article>
+
+          <article class="support-card">
+            <div class="support-icon">⚠️</div>
+            <h3>Comportamentos aditivos</h3>
+            <p><strong>Linha Vida — 1414</strong><br>Apoio, aconselhamento e informação sobre álcool, drogas e outras dependências.</p>
+            <a class="support-link" href="https://sicad.pt/" target="_blank" rel="noopener noreferrer">Consultar SICAD →</a>
+          </article>
+
+          <article class="support-card">
+            <div class="support-icon">🤝</div>
+            <h3>Relações e violência</h3>
+            <p><strong>APAV — 116 006</strong><br>Apoio gratuito e confidencial a vítimas de crime ou violência, familiares e amigos.</p>
+            <a class="support-link" href="https://apav.pt/linha-de-apoio-a-vitima-116-006" target="_blank" rel="noopener noreferrer">Consultar APAV →</a>
+          </article>
         </div>
       </section>
 
-      <section class="closing">
-        <strong>A tua participação faz a diferença.</strong>
-        <span>Ajuda-nos a perceber o que já funciona, onde existem dificuldades e que respostas podem ser melhoradas.</span>
+      <section class="privacy" aria-label="Informação sobre a participação">
+        <div class="privacy-card">
+          <h3>🔒 Privacidade e anonimato</h3>
+          <p>Não é solicitado nome, email, telefone ou qualquer outro elemento de identificação direta. As respostas serão analisadas apenas de forma conjunta.</p>
+        </div>
+        <div class="privacy-card">
+          <h3>📊 Para que servem as respostas?</h3>
+          <p>Os resultados vão ajudar a identificar necessidades, aspetos positivos e prioridades de intervenção para os jovens do concelho de Gouveia.</p>
+        </div>
+      </section>
+
+      <section class="emergency">
+        <strong>Em situação de emergência ou risco imediato, liga 112.</strong>
+        <span>Não esperes pela resposta a um questionário ou por contacto através desta página.</span>
+      </section>
+
+      <section class="links" aria-label="Links úteis">
+        <h3>Links úteis</h3>
+        <div class="link-row">
+          <a href="https://www.cm-gouveia.pt/" target="_blank" rel="noopener noreferrer">Município de Gouveia</a>
+          <a href="https://www.sns24.gov.pt/" target="_blank" rel="noopener noreferrer">SNS 24</a>
+          <a href="https://ipdj.gov.pt/" target="_blank" rel="noopener noreferrer">IPDJ</a>
+          <a href="https://70ja.ipdj.gov.pt/saude-ja" target="_blank" rel="noopener noreferrer">Saúde Já / Cuida-te</a>
+          <a href="https://sicad.pt/" target="_blank" rel="noopener noreferrer">SICAD</a>
+          <a href="https://apav.pt/" target="_blank" rel="noopener noreferrer">APAV</a>
+        </div>
       </section>
     </div>
   </main>
 
-  <footer><div class="shell">Município de Gouveia · Conselho Municipal da Juventude de Gouveia</div></footer>
+  <footer><div class="shell">Município de Gouveia · Conselho Municipal da Juventude de Gouveia · Saúde e Bem-Estar Jovem</div></footer>
 </body>
 </html>
